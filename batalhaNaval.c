@@ -19,7 +19,7 @@ int main() {
     {3,0,0,0,0,0,0,0,0,3}
   };
       
-    printf("Digite uma opção para ativar uma habilidade especial (1 - cone, 2-octaedro, 3-cruz): ");
+    printf("Digite uma opção para ativar uma habilidade especial (1-cone, 2-octaedro, 3-cruz): ");
     scanf("%d", &opcao);
 
     for (int i = 0; i < LINHAS; i++) {
