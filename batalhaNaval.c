@@ -6,7 +6,7 @@
 // Siga os comentários para implementar cada parte do desafio.
 
 int main() {
-    int tabuleiro[LINHAS][COLUNAS] = {
+    int opcao,tabuleiro[LINHAS][COLUNAS] = {
     {3,3,3,3,0,0,0,0,0,0},
     {0,0,0,0,3,0,0,0,0,0},
     {0,0,0,0,3,0,0,0,0,0},
@@ -18,43 +18,101 @@ int main() {
     {0,3,0,0,0,0,0,0,3,0},
     {3,0,0,0,0,0,0,0,0,3}
   };
+      
+    printf("Digite uma opção para ativar uma habilidade especial (1 - cone, 2-octaedro, 3-cruz): ");
+    scanf("%d", &opcao);
 
     for (int i = 0; i < LINHAS; i++) {
         for (int j = 0; j < COLUNAS; j++) {
             printf("%d ", tabuleiro[i][j]);
+           
+            
         }
-        printf("\n"); // Quebra de linha após cada linha da matriz
+         printf("\n");
     }
-    // Nível Novato - Posicionamento dos Navios
-    // Sugestão: Declare uma matriz bidimensional para representar o tabuleiro (Ex: int tabuleiro[5][5];).
-    // Sugestão: Posicione dois navios no tabuleiro, um verticalmente e outro horizontalmente.
-    // Sugestão: Utilize `printf` para exibir as coordenadas de cada parte dos navios.
+      printf("\n");
+    switch (opcao)
+    {
+    case 1:
+        for (int i = 0; i < LINHAS; i++) {
+        for (int j = 0; j < COLUNAS; j++) {
+         
+      int tabuleiro[LINHAS][COLUNAS] = {
+                {3,3,3,3,0,0,0,0,0,0},
+                {0,0,0,0,3,0,0,0,0,0},
+                {0,0,0,0,3,0,0,1,0,0},
+                {0,0,0,0,3,0,1,1,1,0},
+                {0,0,0,0,3,1,1,1,1,1},
+                {0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,3,0,0,3,0,0,0},
+                {0,0,3,0,0,0,0,3,0,0},
+                {0,3,0,0,0,0,0,0,3,0},
+                {3,0,0,0,0,0,0,0,0,3}
+            };
+             printf("%d ", tabuleiro[i][j]);
+            
+                    }
 
-    // Nível Aventureiro - Expansão do Tabuleiro e Posicionamento Diagonal
-    // Sugestão: Expanda o tabuleiro para uma matriz 10x10.
-    // Sugestão: Posicione quatro navios no tabuleiro, incluindo dois na diagonal.
-    // Sugestão: Exiba o tabuleiro completo no console, mostrando 0 para posições vazias e 3 para posições ocupadas.
+                      printf("\n");
+                }
+        break;
 
-    // Nível Mestre - Habilidades Especiais com Matrizes
-    // Sugestão: Crie matrizes para representar habilidades especiais como cone, cruz, e octaedro.
-    // Sugestão: Utilize estruturas de repetição aninhadas para preencher as áreas afetadas por essas habilidades no tabuleiro.
-    // Sugestão: Exiba o tabuleiro com as áreas afetadas, utilizando 0 para áreas não afetadas e 1 para áreas atingidas.
+        case 2:
+        for (int i = 0; i < LINHAS; i++) {
+        for (int j = 0; j < COLUNAS; j++) {
+         
+      int tabuleiro[LINHAS][COLUNAS] = {
+                {3,3,3,3,0,0,0,1,0,0},
+                {0,0,0,0,3,0,1,1,1,0},
+                {0,0,0,0,3,0,0,1,0,0},
+                {0,0,0,0,3,0,0,0,0,0},
+                {0,0,0,0,3,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,3,0,0,3,0,0,0},
+                {0,0,3,0,0,0,0,3,0,0},
+                {0,3,0,0,0,0,0,0,3,0},
+                {3,0,0,0,0,0,0,0,0,3}
+            };
+             printf("%d ", tabuleiro[i][j]);
+            
+                    }
 
-    // Exemplos de exibição das habilidades:
-    // Exemplo para habilidade em cone:
-    // 0 0 1 0 0
-    // 0 1 1 1 0
-    // 1 1 1 1 1
+                      printf("\n");
+                }
+        break;
+      case 3:
+        for (int i = 0; i < LINHAS; i++) {
+        for (int j = 0; j < COLUNAS; j++) {
+         
+      int tabuleiro[LINHAS][COLUNAS] = {
+                {3,3,3,3,0,0,0,1,0,0},
+                {0,0,0,0,3,1,1,1,1,1},
+                {0,0,0,0,3,0,0,1,0,0},
+                {0,0,0,0,3,0,0,0,0,0},
+                {0,0,0,0,3,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,3,0,0,3,0,0,0},
+                {0,0,3,0,0,0,0,3,0,0},
+                {0,3,0,0,0,0,0,0,3,0},
+                {3,0,0,0,0,0,0,0,0,3}
+            };
+             printf("%d ", tabuleiro[i][j]);
+            
+                    }
+
+                      printf("\n");
+                }
+        break;
     
-    // Exemplo para habilidade em octaedro:
-    // 0 0 1 0 0
-    // 0 1 1 1 0
-    // 0 0 1 0 0
-
-    // Exemplo para habilidade em cruz:
-    // 0 0 1 0 0
-    // 1 1 1 1 1
-    // 0 0 1 0 0
-
-    return 0;
+    
+    default:
+     printf("Opção inválida\n");
+        break;
+    }
+      return 0;
 }
+
+ 
+
+    
+    
